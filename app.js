@@ -2,12 +2,14 @@ const inputEmail = document.getElementById('input-email');
 const heroError = document.getElementById('hero-error');
 const heroText = document.getElementById('error-text');
 
-inputEmail.addEventListener('input', () =>{
-   if(!inputEmail.value.includes('@' && '.')){
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+inputEmail.addEventListener('input', () => {
+  if (!emailRegex.test(inputEmail.value.trim())) {
     heroError.classList.remove('hide');
     heroText.classList.remove('hide');
-   } else{
+  } else {
     heroError.classList.add('hide');
     heroText.classList.add('hide');
-   }
-})
+  }
+});
