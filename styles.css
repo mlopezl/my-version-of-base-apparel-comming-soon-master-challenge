@@ -148,8 +148,10 @@ body{
 }
 
 .error__text{
+    width: 100%;
     color: var(--Soft-Red);
     font-size: 0.8rem;
+    text-align: left;
     padding-left: 30px;
     padding-bottom: 30px;
 }
@@ -160,8 +162,9 @@ body{
 
 @media (max-width: 1024px){
     .hero__container{
-        width: 90%;
+        width: 100%;
         height: auto;
+        margin: 0;
     }
 
     .hero__main{
@@ -176,7 +179,7 @@ body{
 
 @media (max-width: 900px){
     .hero__container{
-        width: 100%
+        width: 100%;
     }
 
     .hero__main{
@@ -199,10 +202,14 @@ body{
 
     .hero__content{
         width: 100%;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero__header{
-        width: 80%;
+        width: 100%;
         padding: 0;
         display: grid;
         place-content: center;
@@ -210,14 +217,16 @@ body{
     }
 
     .hero__main{
-        width: 80%;
+        width: 320px;
         padding: 0;
+        margin: 0;
         padding-bottom: 60px;
         text-align: center;
     }
 
     .hero__title{
         font-size: 2rem;
+        line-height: 40px;
     }
 
     .hero__description{
@@ -240,16 +249,26 @@ body{
     }
 
     .hero__error{
-        right: calc(100px + 10px);
-    }
-}
-
-@media(max-width: 375px){
-    .hero__logo{
-        padding-left: 40px;
+        right: 70px;
     }
 
     .error__text{
-        padding: 0px;
+        width: 100%;
     }
+}
+
+@media (max-width: 320px){
+    .hero__logo{
+        padding-left: 15px;
+    }
+
+    .hero__description{
+        padding: 0px 10px 0px 10px;
+    }
+
+    .hero__input{
+        width: 95%;
+        margin-left: 7px;
+    }
+
 }
